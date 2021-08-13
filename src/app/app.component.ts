@@ -1,32 +1,61 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <!--The content below is only a placeholder and can be replaced.-->
-    <div style="text-align:center" class="content">
-      <h1>
-        Welcome to {{title}}!
-      </h1>
-      <span style="display: block">{{ title }} app is running!</span>
-      <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-    </div>
-    <h2>Here are some links to help you start: </h2>
-    <ul>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-      </li>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-      </li>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-      </li>
-    </ul>
-    
-  `,
+  template: `<sh-page [theme]="themeValue">
+                <sh-dropdown [label]="label"                             
+                             [condensed]="condensed"
+                             [value]="value"                             
+                             [items]="items"
+                             [attr.multi-select]="multiselect === true ? true : undefined"
+                             [attr.no-border]="noborder === true ? true : undefined"
+                             [error]="error"
+                             [success]="success"
+                             [attr.error-message]="errorMessage">
+                    <sh-menu-item label='Item 1'></sh-menu-item>
+                    <sh-menu-item label='Item 2'></sh-menu-item>
+                    <sh-menu-item label='Item 3'></sh-menu-item>
+                    <sh-menu-item label='Item 4'></sh-menu-item>
+                    <sh-menu-item label='Item 5'></sh-menu-item>
+                    <sh-menu-item label='Item 6'></sh-menu-item>
+                    <sh-menu-item label='Item 7'></sh-menu-item>
+                    <sh-menu-item label='Item 8'></sh-menu-item>
+                    <sh-menu-item label='Item 9'></sh-menu-item>
+                    <sh-menu-item label='Item 10'></sh-menu-item>
+                  </sh-dropdown>
+              </sh-page>`,
   styles: []
 })
 export class AppComponent {
   title = 'my-shui-app';
+
+  @Input()
+  themeValue = 'dark';
+
+  @Input()
+  condensed = false;
+
+  @Input()
+  label = 'label';
+
+  @Input()
+  value = 'Item 3';
+
+  @Input()
+  noborder = false;
+  
+  @Input()
+  error = false;
+
+  @Input()
+  errorMessage = 'Error Message ( Optional )';
+
+  @Input()
+  items = 3;
+
+  @Input()
+  multiselect = false;
+
+  @Input()
+  success = false;
 }

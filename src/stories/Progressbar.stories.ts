@@ -3,7 +3,8 @@ import Progressbar from './progressbar.component';
 
 export default {
     title: 'Shui/Progressbar',
-    component: Progressbar
+    component: Progressbar,
+    parameters:{ layout:'padded', },
   } as Meta;
 
 const Template: Story<Progressbar> = (args: Progressbar) => ({

@@ -47,7 +47,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-5259ffef93c60de301b0ab8eeb56e30b",
+            "id": "component-AppComponent-b89a99226c2142ca146b6b2a8eab558c",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -57,10 +57,91 @@
             "selector": "app-root",
             "styleUrls": [],
             "styles": [],
-            "template": "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\" class=\"content\">\n  <h1>\n    Welcome to {{title}}!\n  </h1>\n  <span style=\"display: block\">{{ title }} app is running!</span>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul>\n\n",
+            "template": "<sh-page [theme]=\"themeValue\">                <sh-dropdown [label]=\"label\"\n                             [condensed]=\"condensed\"\n                             [value]=\"value\"\n                             [items]=\"items\"\n                             [attr.multi-select]=\"multiselect === true ? true : undefined\"\n                             [attr.no-border]=\"noborder === true ? true : undefined\"\n                             [error]=\"error\"\n                             [success]=\"success\"\n                             [attr.error-message]=\"errorMessage\">\n                    <sh-menu-item label='Item 1'></sh-menu-item>\n                    <sh-menu-item label='Item 2'></sh-menu-item>\n                    <sh-menu-item label='Item 3'></sh-menu-item>\n                    <sh-menu-item label='Item 4'></sh-menu-item>\n                    <sh-menu-item label='Item 5'></sh-menu-item>\n                    <sh-menu-item label='Item 6'></sh-menu-item>\n                    <sh-menu-item label='Item 7'></sh-menu-item>\n                    <sh-menu-item label='Item 8'></sh-menu-item>\n                    <sh-menu-item label='Item 9'></sh-menu-item>\n                    <sh-menu-item label='Item 10'></sh-menu-item>\n                  </sh-dropdown>\n              </sh-page>",
             "templateUrl": [],
             "viewProviders": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "condensed",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 36,
+                    "type": "boolean"
+                },
+                {
+                    "name": "error",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 48,
+                    "type": "boolean"
+                },
+                {
+                    "name": "errorMessage",
+                    "defaultValue": "'Error Message ( Optional )'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 51,
+                    "type": "string"
+                },
+                {
+                    "name": "items",
+                    "defaultValue": "3",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 54,
+                    "type": "number"
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'label'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 39,
+                    "type": "string"
+                },
+                {
+                    "name": "multiselect",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 57,
+                    "type": "boolean"
+                },
+                {
+                    "name": "noborder",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 45,
+                    "type": "boolean"
+                },
+                {
+                    "name": "success",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 60,
+                    "type": "boolean"
+                },
+                {
+                    "name": "themeValue",
+                    "defaultValue": "'dark'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 33,
+                    "type": "string"
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "'Item 3'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 42,
+                    "type": "string"
+                }
+            ],
             "outputsClass": [],
             "propertiesClass": [
                 {
@@ -71,7 +152,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 31
+                    "line": 30
                 }
             ],
             "methodsClass": [],
@@ -82,7 +163,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  template: `\n    <!--The content below is only a placeholder and can be replaced.-->\n    <div style=\"text-align:center\" class=\"content\">\n      <h1>\n        Welcome to {{title}}!\n      </h1>\n      <span style=\"display: block\">{{ title }} app is running!</span>\n      <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n    </div>\n    <h2>Here are some links to help you start: </h2>\n    <ul>\n      <li>\n        <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n      </li>\n      <li>\n        <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">CLI Documentation</a></h2>\n      </li>\n      <li>\n        <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n      </li>\n    </ul>\n    \n  `,\n  styles: []\n})\nexport class AppComponent {\n  title = 'my-shui-app';\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  template: `<sh-page [theme]=\"themeValue\">\n                <sh-dropdown [label]=\"label\"                             \n                             [condensed]=\"condensed\"\n                             [value]=\"value\"                             \n                             [items]=\"items\"\n                             [attr.multi-select]=\"multiselect === true ? true : undefined\"\n                             [attr.no-border]=\"noborder === true ? true : undefined\"\n                             [error]=\"error\"\n                             [success]=\"success\"\n                             [attr.error-message]=\"errorMessage\">\n                    <sh-menu-item label='Item 1'></sh-menu-item>\n                    <sh-menu-item label='Item 2'></sh-menu-item>\n                    <sh-menu-item label='Item 3'></sh-menu-item>\n                    <sh-menu-item label='Item 4'></sh-menu-item>\n                    <sh-menu-item label='Item 5'></sh-menu-item>\n                    <sh-menu-item label='Item 6'></sh-menu-item>\n                    <sh-menu-item label='Item 7'></sh-menu-item>\n                    <sh-menu-item label='Item 8'></sh-menu-item>\n                    <sh-menu-item label='Item 9'></sh-menu-item>\n                    <sh-menu-item label='Item 10'></sh-menu-item>\n                  </sh-dropdown>\n              </sh-page>`,\n  styles: []\n})\nexport class AppComponent {\n  title = 'my-shui-app';\n\n  @Input()\n  themeValue = 'dark';\n\n  @Input()\n  condensed = false;\n\n  @Input()\n  label = 'label';\n\n  @Input()\n  value = 'Item 3';\n\n  @Input()\n  noborder = false;\n  \n  @Input()\n  error = false;\n\n  @Input()\n  errorMessage = 'Error Message ( Optional )';\n\n  @Input()\n  items = 3;\n\n  @Input()\n  multiselect = false;\n\n  @Input()\n  success = false;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
@@ -139,6 +220,145 @@
             "rawdescription": "\n",
             "type": "component",
             "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-button',\r\n  template: `<sh-button [color]=color \r\n                        [label]=label\r\n                        [size]=size></sh-button>`\r\n})\r\n\r\nexport default class ButtonComponent {\r\n  \r\n  @Input()\r\n  color: 'primary' | 'secondary' | 'tertiary' = 'primary';\r\n\r\n  @Input()\r\n  label: 'Primary' | 'Secondary' | 'Tertiary' = 'Primary';\r\n\r\n  @Input()\r\n  size: 's' | 'm' | 'l' | 'auto' = 'auto';\r\n}\r\n  \r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": ""
+        },
+        {
+            "name": "DropDownComponent",
+            "id": "component-DropDownComponent-88844cb9d9a45ee4ee08b2fed0137d1e",
+            "file": "src/stories/dropdown.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-dropdown",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<sh-page [theme]=\"theme\" scrollable>                <sh-dropdown #dropdown\n                             [label]=\"label\"\n                             [value]=\"value\"\n                             [items]=\"items\"\n                             [editable]=\"editable\"\n                             [mandatory]=\"mandatory\"\n                             [disabled]=\"disabled\"\n                             [success]=\"success\"\n                             [safety]=\"safety\"\n                             [error]=\"error\"\n                             [attr.error-message]=\"errorMessage\"\n                             [condensed]=\"condensed\"\n                             [attr.no-border]=\"noborder === true ? true : undefined\"\n                             [attr.multi-select]=\"multiselect === true ? true : undefined\">\n                    <sh-menu-item label='Item 1'></sh-menu-item>\n                    <sh-menu-item label='Item 2'></sh-menu-item>\n                    <sh-menu-item label='Item 3'></sh-menu-item>\n                    <sh-menu-item label='Item 4'></sh-menu-item>\n                    <sh-menu-item label='Item 5'></sh-menu-item>\n                    <sh-menu-item label='Item 6'></sh-menu-item>\n                    <sh-menu-item label='Item 7'></sh-menu-item>\n                    <sh-menu-item label='Item 8'></sh-menu-item>\n                    <sh-menu-item label='Item 9'></sh-menu-item>\n                    <sh-menu-item label='Item 10'></sh-menu-item>\n                </sh-dropdown>\n            </sh-page>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "condensed",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 41,
+                    "type": "boolean"
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 44,
+                    "type": "boolean"
+                },
+                {
+                    "name": "editable",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 65,
+                    "type": "boolean"
+                },
+                {
+                    "name": "error",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 59,
+                    "type": "boolean"
+                },
+                {
+                    "name": "errorMessage",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 62,
+                    "type": "string"
+                },
+                {
+                    "name": "items",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 68,
+                    "type": "any"
+                },
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 50,
+                    "type": "string"
+                },
+                {
+                    "name": "mandatory",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 47,
+                    "type": "boolean"
+                },
+                {
+                    "name": "multiselect",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 77,
+                    "type": "boolean"
+                },
+                {
+                    "name": "noborder",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 56,
+                    "type": "boolean"
+                },
+                {
+                    "name": "safety",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 71,
+                    "type": "boolean"
+                },
+                {
+                    "name": "success",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 74,
+                    "type": "boolean"
+                },
+                {
+                    "name": "theme",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 38,
+                    "type": "string"
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 53,
+                    "type": "string"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-dropdown',\r\n  template: `<sh-page [theme]=\"theme\" scrollable>\r\n                <sh-dropdown #dropdown\r\n                             [label]=\"label\"\r\n                             [value]=\"value\"                             \r\n                             [items]=\"items\"\r\n                             [editable]=\"editable\"\r\n                             [mandatory]=\"mandatory\"\r\n                             [disabled]=\"disabled\"\r\n                             [success]=\"success\"\r\n                             [safety]=\"safety\"\r\n                             [error]=\"error\"\r\n                             [attr.error-message]=\"errorMessage\"\r\n                             [condensed]=\"condensed\"                                                          \r\n                             [attr.no-border]=\"noborder === true ? true : undefined\"\r\n                             [attr.multi-select]=\"multiselect === true ? true : undefined\">\r\n                    <sh-menu-item label='Item 1'></sh-menu-item>\r\n                    <sh-menu-item label='Item 2'></sh-menu-item>\r\n                    <sh-menu-item label='Item 3'></sh-menu-item>\r\n                    <sh-menu-item label='Item 4'></sh-menu-item>\r\n                    <sh-menu-item label='Item 5'></sh-menu-item>\r\n                    <sh-menu-item label='Item 6'></sh-menu-item>\r\n                    <sh-menu-item label='Item 7'></sh-menu-item>\r\n                    <sh-menu-item label='Item 8'></sh-menu-item>\r\n                    <sh-menu-item label='Item 9'></sh-menu-item>\r\n                    <sh-menu-item label='Item 10'></sh-menu-item>\r\n                </sh-dropdown>\r\n            </sh-page>`\r\n})\r\n\r\nexport default class DropDownComponent {\r\n\r\n    @Input()\r\n    theme?: string;\r\n\r\n    @Input()\r\n    condensed = false;\r\n\r\n    @Input()\r\n    disabled = false;\r\n\r\n    @Input()\r\n    mandatory = false;\r\n\r\n    @Input()\r\n    label?: string;\r\n\r\n    @Input()\r\n    value?: string;\r\n\r\n    @Input()\r\n    noborder = false;\r\n    \r\n    @Input()\r\n    error = false;\r\n\r\n    @Input()\r\n    errorMessage?: string;\r\n\r\n    @Input()\r\n    editable = false;\r\n\r\n    @Input()\r\n    items;\r\n\r\n    @Input()\r\n    safety = false;\r\n\r\n    @Input()\r\n    success = false;\r\n\r\n    @Input()\r\n    multiselect = false;\r\n}",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
@@ -331,13 +551,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-1158a6a8cf0cae7aa6834e2ca9e16a44",
+            "id": "module-AppModule-d179344ff0474b6276f3d07a5c475ab0",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { BrowserModule } from '@angular/platform-browser';\nimport { NgModule } from '@angular/core';\n\nimport { AppComponent } from './app.component';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { BrowserModule } from '@angular/platform-browser';\nimport { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';\n\nimport { AppComponent } from './app.component';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule\n  ],\n  schemas: [CUSTOM_ELEMENTS_SCHEMA],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -395,6 +615,156 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "DropdownCondensed",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "DropdownDarkTheme",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "DropdownDisabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "DropdownEditable",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "DropdownError",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "DropdownErrorMessage",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "DropdownItems",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "DropdownLabel",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "DropdownLightTheme",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "DropdownMandatory",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "DropdownMultiSelect",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "DropdownNoBorder",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "DropdownSafety",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "DropdownSuccess",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "DropdownValue",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "environment",
@@ -589,6 +959,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Dropdown>",
+                "defaultValue": "(args: Dropdown) => ({\r\n    props: args,\r\n    onClick: action('click'),\r\n  })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Progressbar.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -731,6 +1111,168 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "literal type"
+                }
+            ],
+            "src/stories/dropdown.stories.ts": [
+                {
+                    "name": "DropdownCondensed",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "DropdownDarkTheme",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "DropdownDisabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "DropdownEditable",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "DropdownError",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "DropdownErrorMessage",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "DropdownItems",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "DropdownLabel",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "DropdownLightTheme",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "DropdownMandatory",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "DropdownMultiSelect",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "DropdownNoBorder",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "DropdownSafety",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "DropdownSuccess",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "DropdownValue",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Dropdown>",
+                    "defaultValue": "(args: Dropdown) => ({\r\n    props: args,\r\n    onClick: action('click'),\r\n  })"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -918,7 +1460,7 @@
                 "linktype": "component",
                 "name": "AppComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/2",
+                "coverageCount": "0/12",
                 "status": "low"
             },
             {
@@ -1158,6 +1700,175 @@
                 "name": "ButtonComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DropDownComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/15",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DropdownCondensed",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DropdownDarkTheme",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DropdownDisabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DropdownEditable",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DropdownError",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DropdownErrorMessage",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DropdownItems",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DropdownLabel",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DropdownLightTheme",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DropdownMandatory",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DropdownMultiSelect",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DropdownNoBorder",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DropdownSafety",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DropdownSuccess",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DropdownValue",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {

@@ -3,7 +3,8 @@ import RadialProgressbar from './radialprogressbar.component';
 
 export default {
     title: 'Shui/RadialProgressbar',
-    component: RadialProgressbar
+    component: RadialProgressbar,
+    parameters:{ layout:'centered', },
   } as Meta;
 
 const Template: Story<RadialProgressbar> = (args: RadialProgressbar) => ({

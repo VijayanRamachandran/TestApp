@@ -3,7 +3,8 @@ import Button from './button.component';
 
 export default {
     title: 'Shui/Button',
-    component: Button
+    component: Button,
+    parameters:{ layout:'centered', },
   } as Meta;
 
 const Template: Story<Button> = (args: Button) => ({

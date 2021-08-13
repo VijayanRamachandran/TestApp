@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
-    "storybook": "npm run docs:json && start-storybook -p 6006",
+    "storybook": "npm run docs:json && start-storybook -p 6006 -s ./storybook/assets",
     "build-storybook": "npm run docs:json && build-storybook",
     "chromatic": "npx chromatic --project-token=1900a214e91c"
   },
@@ -37,7 +37,9 @@
     "@storybook/addon-actions": "^6.3.6",
     "@storybook/addon-essentials": "^6.3.6",
     "@storybook/addon-links": "^6.3.6",
+    "@storybook/addons": "^6.3.7",
     "@storybook/angular": "^6.3.6",
+    "@storybook/theming": "^6.3.7",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",

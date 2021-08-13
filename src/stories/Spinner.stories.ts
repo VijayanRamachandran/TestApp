@@ -3,7 +3,8 @@ import Spinner from './spinner.component';
 
 export default {
     title: 'Shui/Spinner',
-    component: Spinner
+    component: Spinner,
+    parameters:{ layout:'centered', },
   } as Meta;
 
 const Template: Story<Spinner> = (args: Spinner) => ({
