@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import Progressbar from './progressbar.component';
 
 export default {
-    title: 'Shui/Progressbar',
+    title: 'SHUI Components/Progressbar',
     component: Progressbar,
     parameters:{ layout:'padded', },
   } as Meta;

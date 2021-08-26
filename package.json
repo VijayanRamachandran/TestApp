@@ -11,7 +11,8 @@
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "npm run docs:json && start-storybook -p 6006 -s ./storybook/assets",
     "build-storybook": "npm run docs:json && build-storybook",
-    "chromatic": "npx chromatic --project-token=1900a214e91c"
+    "chromatic": "npx chromatic --project-token=1900a214e91c",
+    "test-storybook": "screener-storybook --conf screener.config.js"
   },
   "private": true,
   "dependencies": {
@@ -37,6 +38,8 @@
     "@storybook/addon-actions": "^6.3.6",
     "@storybook/addon-essentials": "^6.3.6",
     "@storybook/addon-links": "^6.3.6",
+    "@storybook/addon-measure": "^6.4.0-alpha.27",
+    "@storybook/addon-outline": "^6.4.0-alpha.27",
     "@storybook/addons": "^6.3.7",
     "@storybook/angular": "^6.3.6",
     "@storybook/theming": "^6.3.7",
@@ -55,6 +58,7 @@
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
     "protractor": "~7.0.0",
+    "screener-storybook": "^0.21.5",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"

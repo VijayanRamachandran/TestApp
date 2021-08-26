@@ -3,14 +3,14 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import Dropdown from './dropdown.component';
 
 export default {
-    title: 'Shui/Dropdown',
+    title: 'SHUI Components/Dropdown',
     component: Dropdown,
     parameters:{ layout:'centered', },
   } as Meta;
 
 const Template: Story<Dropdown> = (args: Dropdown) => ({
     props: args,
-    onClick: action('click'),
+    argTypes: { onClick: { action: 'clicked' } },
   });
 
 export const DropdownLightTheme = Template.bind({});

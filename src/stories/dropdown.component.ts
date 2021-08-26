@@ -4,8 +4,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'storybook-dropdown',
   template: `<sh-page [theme]="theme" scrollable>
-                <sh-dropdown #dropdown
-                             [label]="label"
+                <sh-dropdown [label]="label"
                              [value]="value"                             
                              [items]="items"
                              [editable]="editable"

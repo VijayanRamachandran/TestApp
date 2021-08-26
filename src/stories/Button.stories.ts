@@ -1,14 +1,19 @@
+import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import Button from './button.component';
 
 export default {
-    title: 'Shui/Button',
+    title: 'SHUI Components/Button',
     component: Button,
-    parameters:{ layout:'centered', },
+    parameters:{ layout:'centered',
+                 /* HTML Events to top Rendered Element */
+                 actions: { handles: ['mouseover', 'click'  ],  },
+              },    
   } as Meta;
 
 const Template: Story<Button> = (args: Button) => ({
     props: args,
+    onClick: action('onClick'),
   });
 
 export const Primary = Template.bind({});

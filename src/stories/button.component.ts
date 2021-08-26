@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'storybook-button',
   template: `<sh-button [color]=color 
                         [label]=label
-                        [size]=size></sh-button>`
+                        [size]=size
+                        (click)="click()"></sh-button>`
 })
 
 export default class ButtonComponent {
@@ -17,5 +18,12 @@ export default class ButtonComponent {
 
   @Input()
   size: 's' | 'm' | 'l' | 'auto' = 'auto';
+
+  @Output()
+  onClick  = new EventEmitter<Event>();
+
+  click() : void {
+    this.onClick.emit();
+  }
 }
   

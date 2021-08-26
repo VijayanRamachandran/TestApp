@@ -2,9 +2,9 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import Spinner from './spinner.component';
 
 export default {
-    title: 'Shui/Spinner',
+    title: 'SHUI Components/Spinner',
     component: Spinner,
-    parameters:{ layout:'centered', },
+    parameters:{ layout:'centered', docs: { page:null }},
   } as Meta;
 
 const Template: Story<Spinner> = (args: Spinner) => ({

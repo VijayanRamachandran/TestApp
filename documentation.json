@@ -170,7 +170,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-a05298b92cae8dcd4f07e2b7455f75cb",
+            "id": "component-ButtonComponent-6707f8bd6528da1fe36b4ba85c067088",
             "file": "src/stories/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -180,7 +180,7 @@
             "selector": "storybook-button",
             "styleUrls": [],
             "styles": [],
-            "template": "<sh-button [color]=color                         [label]=label\n                        [size]=size></sh-button>",
+            "template": "<sh-button [color]=color                         [label]=label\n                        [size]=size\n                        (click)=\"click()\"></sh-button>",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -189,7 +189,7 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 14,
                     "type": "\"primary\" | \"secondary\" | \"tertiary\""
                 },
                 {
@@ -197,7 +197,7 @@
                     "defaultValue": "'Primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 16,
+                    "line": 17,
                     "type": "\"Primary\" | \"Secondary\" | \"Tertiary\""
                 },
                 {
@@ -205,13 +205,33 @@
                     "defaultValue": "'auto'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 19,
+                    "line": 20,
                     "type": "\"s\" | \"m\" | \"l\" | \"auto\""
                 }
             ],
-            "outputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 23,
+                    "type": "EventEmitter"
+                }
+            ],
             "propertiesClass": [],
-            "methodsClass": [],
+            "methodsClass": [
+                {
+                    "name": "click",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 25,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -219,14 +239,14 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-button',\r\n  template: `<sh-button [color]=color \r\n                        [label]=label\r\n                        [size]=size></sh-button>`\r\n})\r\n\r\nexport default class ButtonComponent {\r\n  \r\n  @Input()\r\n  color: 'primary' | 'secondary' | 'tertiary' = 'primary';\r\n\r\n  @Input()\r\n  label: 'Primary' | 'Secondary' | 'Tertiary' = 'Primary';\r\n\r\n  @Input()\r\n  size: 's' | 'm' | 'l' | 'auto' = 'auto';\r\n}\r\n  \r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-button',\r\n  template: `<sh-button [color]=color \r\n                        [label]=label\r\n                        [size]=size\r\n                        (click)=\"click()\"></sh-button>`\r\n})\r\n\r\nexport default class ButtonComponent {\r\n  \r\n  @Input()\r\n  color: 'primary' | 'secondary' | 'tertiary' = 'primary';\r\n\r\n  @Input()\r\n  label: 'Primary' | 'Secondary' | 'Tertiary' = 'Primary';\r\n\r\n  @Input()\r\n  size: 's' | 'm' | 'l' | 'auto' = 'auto';\r\n\r\n  @Output()\r\n  onClick  = new EventEmitter<Event>();\r\n\r\n  click() : void {\r\n    this.onClick.emit();\r\n  }\r\n}\r\n  \r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
         },
         {
             "name": "DropDownComponent",
-            "id": "component-DropDownComponent-88844cb9d9a45ee4ee08b2fed0137d1e",
+            "id": "component-DropDownComponent-178bbc2a96f54985f51e3427912c93a2",
             "file": "src/stories/dropdown.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -236,7 +256,7 @@
             "selector": "storybook-dropdown",
             "styleUrls": [],
             "styles": [],
-            "template": "<sh-page [theme]=\"theme\" scrollable>                <sh-dropdown #dropdown\n                             [label]=\"label\"\n                             [value]=\"value\"\n                             [items]=\"items\"\n                             [editable]=\"editable\"\n                             [mandatory]=\"mandatory\"\n                             [disabled]=\"disabled\"\n                             [success]=\"success\"\n                             [safety]=\"safety\"\n                             [error]=\"error\"\n                             [attr.error-message]=\"errorMessage\"\n                             [condensed]=\"condensed\"\n                             [attr.no-border]=\"noborder === true ? true : undefined\"\n                             [attr.multi-select]=\"multiselect === true ? true : undefined\">\n                    <sh-menu-item label='Item 1'></sh-menu-item>\n                    <sh-menu-item label='Item 2'></sh-menu-item>\n                    <sh-menu-item label='Item 3'></sh-menu-item>\n                    <sh-menu-item label='Item 4'></sh-menu-item>\n                    <sh-menu-item label='Item 5'></sh-menu-item>\n                    <sh-menu-item label='Item 6'></sh-menu-item>\n                    <sh-menu-item label='Item 7'></sh-menu-item>\n                    <sh-menu-item label='Item 8'></sh-menu-item>\n                    <sh-menu-item label='Item 9'></sh-menu-item>\n                    <sh-menu-item label='Item 10'></sh-menu-item>\n                </sh-dropdown>\n            </sh-page>",
+            "template": "<sh-page [theme]=\"theme\" scrollable>                <sh-dropdown [label]=\"label\"\n                             [value]=\"value\"\n                             [items]=\"items\"\n                             [editable]=\"editable\"\n                             [mandatory]=\"mandatory\"\n                             [disabled]=\"disabled\"\n                             [success]=\"success\"\n                             [safety]=\"safety\"\n                             [error]=\"error\"\n                             [attr.error-message]=\"errorMessage\"\n                             [condensed]=\"condensed\"\n                             [attr.no-border]=\"noborder === true ? true : undefined\"\n                             [attr.multi-select]=\"multiselect === true ? true : undefined\">\n                    <sh-menu-item label='Item 1'></sh-menu-item>\n                    <sh-menu-item label='Item 2'></sh-menu-item>\n                    <sh-menu-item label='Item 3'></sh-menu-item>\n                    <sh-menu-item label='Item 4'></sh-menu-item>\n                    <sh-menu-item label='Item 5'></sh-menu-item>\n                    <sh-menu-item label='Item 6'></sh-menu-item>\n                    <sh-menu-item label='Item 7'></sh-menu-item>\n                    <sh-menu-item label='Item 8'></sh-menu-item>\n                    <sh-menu-item label='Item 9'></sh-menu-item>\n                    <sh-menu-item label='Item 10'></sh-menu-item>\n                </sh-dropdown>\n            </sh-page>",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -245,7 +265,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 41,
+                    "line": 40,
                     "type": "boolean"
                 },
                 {
@@ -253,7 +273,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 44,
+                    "line": 43,
                     "type": "boolean"
                 },
                 {
@@ -261,7 +281,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 65,
+                    "line": 64,
                     "type": "boolean"
                 },
                 {
@@ -269,28 +289,28 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 59,
+                    "line": 58,
                     "type": "boolean"
                 },
                 {
                     "name": "errorMessage",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 62,
+                    "line": 61,
                     "type": "string"
                 },
                 {
                     "name": "items",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 68,
+                    "line": 67,
                     "type": "any"
                 },
                 {
                     "name": "label",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 50,
+                    "line": 49,
                     "type": "string"
                 },
                 {
@@ -298,7 +318,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 47,
+                    "line": 46,
                     "type": "boolean"
                 },
                 {
@@ -306,7 +326,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 77,
+                    "line": 76,
                     "type": "boolean"
                 },
                 {
@@ -314,7 +334,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 56,
+                    "line": 55,
                     "type": "boolean"
                 },
                 {
@@ -322,7 +342,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 71,
+                    "line": 70,
                     "type": "boolean"
                 },
                 {
@@ -330,21 +350,21 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 74,
+                    "line": 73,
                     "type": "boolean"
                 },
                 {
                     "name": "theme",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 38,
+                    "line": 37,
                     "type": "string"
                 },
                 {
                     "name": "value",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 53,
+                    "line": 52,
                     "type": "string"
                 }
             ],
@@ -358,7 +378,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-dropdown',\r\n  template: `<sh-page [theme]=\"theme\" scrollable>\r\n                <sh-dropdown #dropdown\r\n                             [label]=\"label\"\r\n                             [value]=\"value\"                             \r\n                             [items]=\"items\"\r\n                             [editable]=\"editable\"\r\n                             [mandatory]=\"mandatory\"\r\n                             [disabled]=\"disabled\"\r\n                             [success]=\"success\"\r\n                             [safety]=\"safety\"\r\n                             [error]=\"error\"\r\n                             [attr.error-message]=\"errorMessage\"\r\n                             [condensed]=\"condensed\"                                                          \r\n                             [attr.no-border]=\"noborder === true ? true : undefined\"\r\n                             [attr.multi-select]=\"multiselect === true ? true : undefined\">\r\n                    <sh-menu-item label='Item 1'></sh-menu-item>\r\n                    <sh-menu-item label='Item 2'></sh-menu-item>\r\n                    <sh-menu-item label='Item 3'></sh-menu-item>\r\n                    <sh-menu-item label='Item 4'></sh-menu-item>\r\n                    <sh-menu-item label='Item 5'></sh-menu-item>\r\n                    <sh-menu-item label='Item 6'></sh-menu-item>\r\n                    <sh-menu-item label='Item 7'></sh-menu-item>\r\n                    <sh-menu-item label='Item 8'></sh-menu-item>\r\n                    <sh-menu-item label='Item 9'></sh-menu-item>\r\n                    <sh-menu-item label='Item 10'></sh-menu-item>\r\n                </sh-dropdown>\r\n            </sh-page>`\r\n})\r\n\r\nexport default class DropDownComponent {\r\n\r\n    @Input()\r\n    theme?: string;\r\n\r\n    @Input()\r\n    condensed = false;\r\n\r\n    @Input()\r\n    disabled = false;\r\n\r\n    @Input()\r\n    mandatory = false;\r\n\r\n    @Input()\r\n    label?: string;\r\n\r\n    @Input()\r\n    value?: string;\r\n\r\n    @Input()\r\n    noborder = false;\r\n    \r\n    @Input()\r\n    error = false;\r\n\r\n    @Input()\r\n    errorMessage?: string;\r\n\r\n    @Input()\r\n    editable = false;\r\n\r\n    @Input()\r\n    items;\r\n\r\n    @Input()\r\n    safety = false;\r\n\r\n    @Input()\r\n    success = false;\r\n\r\n    @Input()\r\n    multiselect = false;\r\n}",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-dropdown',\r\n  template: `<sh-page [theme]=\"theme\" scrollable>\r\n                <sh-dropdown [label]=\"label\"\r\n                             [value]=\"value\"                             \r\n                             [items]=\"items\"\r\n                             [editable]=\"editable\"\r\n                             [mandatory]=\"mandatory\"\r\n                             [disabled]=\"disabled\"\r\n                             [success]=\"success\"\r\n                             [safety]=\"safety\"\r\n                             [error]=\"error\"\r\n                             [attr.error-message]=\"errorMessage\"\r\n                             [condensed]=\"condensed\"                                                          \r\n                             [attr.no-border]=\"noborder === true ? true : undefined\"\r\n                             [attr.multi-select]=\"multiselect === true ? true : undefined\">\r\n                    <sh-menu-item label='Item 1'></sh-menu-item>\r\n                    <sh-menu-item label='Item 2'></sh-menu-item>\r\n                    <sh-menu-item label='Item 3'></sh-menu-item>\r\n                    <sh-menu-item label='Item 4'></sh-menu-item>\r\n                    <sh-menu-item label='Item 5'></sh-menu-item>\r\n                    <sh-menu-item label='Item 6'></sh-menu-item>\r\n                    <sh-menu-item label='Item 7'></sh-menu-item>\r\n                    <sh-menu-item label='Item 8'></sh-menu-item>\r\n                    <sh-menu-item label='Item 9'></sh-menu-item>\r\n                    <sh-menu-item label='Item 10'></sh-menu-item>\r\n                </sh-dropdown>\r\n            </sh-page>`\r\n})\r\n\r\nexport default class DropDownComponent {\r\n\r\n    @Input()\r\n    theme?: string;\r\n\r\n    @Input()\r\n    condensed = false;\r\n\r\n    @Input()\r\n    disabled = false;\r\n\r\n    @Input()\r\n    mandatory = false;\r\n\r\n    @Input()\r\n    label?: string;\r\n\r\n    @Input()\r\n    value?: string;\r\n\r\n    @Input()\r\n    noborder = false;\r\n    \r\n    @Input()\r\n    error = false;\r\n\r\n    @Input()\r\n    errorMessage?: string;\r\n\r\n    @Input()\r\n    editable = false;\r\n\r\n    @Input()\r\n    items;\r\n\r\n    @Input()\r\n    safety = false;\r\n\r\n    @Input()\r\n    success = false;\r\n\r\n    @Input()\r\n    multiselect = false;\r\n}",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
@@ -953,7 +973,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\r\n    props: args,\r\n  })"
+                "defaultValue": "(args: Button) => ({\r\n    props: args,\r\n    onClick: action('onClick'),\r\n  })"
             },
             {
                 "name": "Template",
@@ -963,7 +983,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Dropdown>",
-                "defaultValue": "(args: Dropdown) => ({\r\n    props: args,\r\n    onClick: action('click'),\r\n  })"
+                "defaultValue": "(args: Dropdown) => ({\r\n    props: args,\r\n    argTypes: { onClick: { action: 'clicked' } },\r\n  })"
             },
             {
                 "name": "Template",
@@ -1079,7 +1099,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<Button>",
-                    "defaultValue": "(args: Button) => ({\r\n    props: args,\r\n  })"
+                    "defaultValue": "(args: Button) => ({\r\n    props: args,\r\n    onClick: action('onClick'),\r\n  })"
                 },
                 {
                     "name": "Tertiary",
@@ -1272,7 +1292,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<Dropdown>",
-                    "defaultValue": "(args: Dropdown) => ({\r\n    props: args,\r\n    onClick: action('click'),\r\n  })"
+                    "defaultValue": "(args: Dropdown) => ({\r\n    props: args,\r\n    argTypes: { onClick: { action: 'clicked' } },\r\n  })"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -1699,7 +1719,7 @@
                 "linktype": "component",
                 "name": "ButtonComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {

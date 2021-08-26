@@ -1,10 +1,11 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import RadialProgressbar from './radialprogressbar.component';
+//import RadialProgressbarDocumentation from './RadialProgressbar-Documentation.mdx';
 
 export default {
-    title: 'Shui/RadialProgressbar',
+    title: 'SHUI Components/RadialProgressbar',
     component: RadialProgressbar,
-    parameters:{ layout:'centered', },
+    parameters:{ layout:'centered', /* docs: { page: RadialProgressbarDocumentation, } */},
   } as Meta;
 
 const Template: Story<RadialProgressbar> = (args: RadialProgressbar) => ({
